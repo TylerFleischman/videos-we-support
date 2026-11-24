@@ -47,3 +47,7 @@ bench/.eventskey
 # written for them. This repo is PUBLIC, so these never belong in it. Keep them on disk only.
 tools/votes/deleted-ideas-*.json
 tools/votes/deleted-pages-*.json
+
+# story-bank refresh working files (raw candidates, fetched tweets, agent batches and results). The
+# run REPORT.md and manual_overrides.json are committed; the bulky raw material stays local.
+story-bank/runs/*/work/

@@ -3,7 +3,7 @@
     python3 story-bank/pipeline/build_new_anchors.py story-bank/runs/<date>
 
 Reads <run>/work/verify_items.json (what went to the checkers) and <run>/work/results/verify_*.json (their
-verdicts), applies the hand decisions in <run>/manual_overrides.json, and writes <run>/work/new_anchors.json
+verdicts), applies the hand decisions in <run>/manual_overrides.json (keyed by k: drop, esc, title, shows, check), and writes <run>/work/new_anchors.json
 in the bank's own shape. Dropped: verdict "false" or "dup", anything dropped by hand, anything with no link.
 Stories the checkers could only confirm from a single first-hand post keep their hedge and get "check": true.
 Nothing here touches the bank; add_to_bank.py does that.
@@ -20,6 +20,8 @@ OVR = json.load(open(_op)) if os.path.exists(_op) else {}
 DROP_K = {int(k) for k in OVR.get("drop", {})}
 ESC_FIX = {int(k): v for k, v in OVR.get("esc", {}).items()}
 TITLE_FIX = {int(k): v for k, v in OVR.get("title", {}).items()}   # titles that overstated a corrected fact
+SHOWS_FIX = {int(k): v for k, v in OVR.get("shows", {}).items()}   # sentences trimmed to what the link supports
+CHECK = {int(k) for k in OVR.get("check", [])}                       # thin sourcing found after the checkers
 
 items = {x["k"]: x for x in json.load(open(os.path.join(WORK, "verify_items.json")))}
 res = {}
@@ -46,7 +48,7 @@ for k in sorted(items):
     if v in ("false", "dup") or k in DROP_K:
         dropped.append((k, OVR["drop"][str(k)] if k in DROP_K else v, it["title"]))
         continue
-    shows = (r.get("shows") or it["shows"]).replace("—", ", ").replace("–", "-").strip()
+    shows = (SHOWS_FIX.get(k) or r.get("shows") or it["shows"]).replace("—", ", ").replace("–", "-").strip()
     url = (r.get("url") or it["candidate"].get("url") or "").strip()
     if not url:
         dropped.append((k, "no link", it["title"])); continue
@@ -63,7 +65,7 @@ for k in sorted(items):
          "esc": int(ESC_FIX.get(k, it["esc"])), "grab": int(r.get("grab") or it["grab"]), "date": date,
          "dgroup": next_group, "added": ADDED}
     next_group += 1
-    if v == "unconfirmed":
+    if v == "unconfirmed" or k in CHECK:
         a["check"] = True
     out.append(a)
 

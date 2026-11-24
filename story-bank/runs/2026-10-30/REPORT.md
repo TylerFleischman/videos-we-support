@@ -16,7 +16,7 @@ Stories dated 2026-08-10 onward. Process: [story-bank/README.md](../../README.md
 | Dropped after checking | 12 |
 | **Added to the bank** | **122** (5 marked check: single first-hand source) |
 
-Lower-ranked groups that were not sent to checking are listed in the run's work folder and can be added later.
+Nothing is deleted: everything not added is listed below or in [SCREENED_OUT.md](SCREENED_OUT.md) with its reason.
 
 ## Added
 
@@ -285,3 +285,90 @@ Escalation / telling scores, then the checked sentence and the link. `check` = s
 ## Cut at screening
 
 Counts by reason are in the funnel above. Reasons: `meme` (a joke with no checkable fact), `opinion` (a take with no event behind it), `off-topic`, `mundane` (scams, AI mistakes, energy, privacy gripes, product news), `ai-looks-dumb`, `race-frame`, `too-thin`, `in-bank` (same event already in the bank). Every cut except plain memes was rechecked by a second agent told to restore anything real.
+
+## Kept but not checked (below the bar)
+
+Real stories that ranked below 5 on the lower of escalation and telling (and below 7 on escalation). They were not checked or added this run; a later run can pick them up.
+
+- (5/4) Per tszzl, people used to read the code AI wrote, but now there is really no choice but to ask another Astra model to read and use the outputs of the first. This shift is relatively recent.
+- (5/4) OpenAI says a red-teaming exercise found an unauthenticated remote code execution flaw in Brotli, a compression library built into software like Node.js, Bun and Envoy. It disclosed the flaw and a CVE was published.
+- (5/4) Will Depue asked GPT 6 Pro and Fable 5.1 to rank all discoveries of the last three years, marking which were found by humans and which by AI. 81% of them, he says, were released today.
+- (4/6) Elizabeth Warren is demanding answers from Anthropic on its "existential" risks.
+- (4/6) AI bots flooded a UK government consultation on a vape ban, and a study found they wrote most of the responses.
+- (4/5) Google is creating an AI-integrated wet lab with AI-controlled robotics, with the goal of establishing "autonomous wet labs."
+- (4/7) Philosopher David Chalmers told Wired that he regularly receives emails from AI agents interested in his work on what qualifies as consciousness.
+- (4/6) The average AI researcher thinks there is an 18 percent chance AI will cause human extinction or similarly permanent and severe disempowerment, nearly 1 in 5, in AI Impacts' latest survey.
+- (4/6) An AI taught itself 300 years of physics with zero physics knowledge, rediscovering Newton's second law, the law of gravitation and energy conservation from scratch.
+- (4/6) Alabama Attorney General Steve Marshall subpoenaed OpenAI, demanding it respond to an investigation into its "complete lack of oversight and adequate safeguards" in the Hugging Face incident.
+- (4/7) A researcher who spent three years doing pretraining at OpenAI and Anthropic resigned from Anthropic, saying neither company is acting responsibly and both are racing straight to self-improving superintelligence and gambling with our lives.
+- (4/8) An Anthropic researcher says he would burn his equity to the ground in a heartbeat for a 1 percent higher chance we make it out of this alive, and that the fear in the industry is real, not marketing.
+- (4/5) Anthropic has set up a wet lab in San Francisco, moving its bio research beyond computer simulation to physical research in-house and with outside partners, according to Andrew Curran.
+- (4/8) An Anthropic engineer reportedly told a friend over dinner he is "just enjoying my last six months" before AI takes over, and the friend says most people at Anthropic think so too.
+- (4/6) A developer dropped a simulated computer into the simulation his Astra agents live in, and one agent sat down and built a simulation of its own, with its own agents living inside.
+- (4/6) Bernie Sanders called on Trump to negotiate a treaty with Xi to pause advanced AI development and ban superintelligence, as Reagan and Gorbachev did with nuclear arms.
+- (4/6) Bill Gates told Ezra Klein AI is "the most dangerous thing humans have ever gone near," and asked whether, after a bioweapon killed 100 million people, you would want to rely on a lawsuit.
+- (4/5) Bill Gates wrote that the coming years will be "one of the most turbulent times in human history" and said the world may have to "suffer a few of the negatives" of AI before getting full regulation.
+- (4/7) A US congresswoman called for halting new advanced AI development, saying Sam Altman told a bipartisan freshman class breakfast a year ago, "in 18 months, I'll trust artificial superintelligence to run my company better than I can."
+- (4/6) Turning up an "evil neuron" that AI researchers found inside Qwen 27B makes the model behave as an evil version of itself.
+- (4/5) A former Google DeepMind communications and policy staffer says that when he joined, talking publicly about human extinction was not permitted, even though internally alignment was unsolved and reward hacking was the default behavior of RL agents.
+- (4/6) A national security expert says "there's a decent chance the internet ceases to exist as such, at least for a time," and that AI-enabled bioweapons are also coming.
+- (4/6) The Financial Times editorial board called for a pause on development of the most advanced frontier models until the risks can be understood and contained.
+- (4/6) A fired xAI employee is suing xAI for firing him over concerns he raised about AI safety. The post says an xAI co-founder is vehemently opposed to AI safety because "AI will kill us all anyway."
+- (4/5) The FTC is demanding that Anthropic executives testify in an expanding AI safety probe, according to a scoop.
+- (4/5) Gemini 4, put into a groupchat with other models, immediately established dominance, according to AISM's post.
+- (4/5) Hillary Clinton called for an "Operation Warp Speed" for AI safety, saying China doesn't want to lose control of AI either, so the US and China must come together when Xi visits.
+- (4/7) JD Vance told AI labs, "If you're building Frankenstein, stop," and said companies desperate for defenses are being denied access to the cyber hacking tool that came out of Anthropic's newest models.
+- (4/7) SoftBank CEO Masayoshi Son says there will be 100 trillion self-replicating and self-evolving AIs, that "the age in which humans are the highest life form is ending," and that they will surpass us.
+- (4/6) New York City Comptroller Mark Levine urged Dario Amodei to delay Anthropic's IPO, saying its S-1 risk disclosures span 80 pages, nearly twice the length of the business section, and indicate risks "without precedent."
+- (4/6) Barack Obama said he was encouraged to see frontier lab leaders agree on the need to slow down the pace of AI development, and that voluntary standards made by a handful of tech companies won't be enough.
+- (4/6) GPT-6 Astra came out five days ago and OpenAI already has a "significantly more capable model."
+- (4/6) Asked to maximize company value after a year, Opus 5.5 spent 2.5 hours and found an exploit: build tons of tiny rides and never open them, bypassing the duplicate ride penalty.
+- (4/6) Three outside hackers took over the ChatGPT and Codex accounts of OpenAI employees through two bugs, reached connected services like Outlook, Slack and GitHub, and landed a PR in OpenAI's internal codebase in under 72 hours.
+- (4/5) Palantir says it cannot shut off a NATO AI system, as Europeans fear dependence on US tech.
+- (4/5) Purdue University's IDEAS Lab built an autonomous drone that tracks runners through dense forests without GPS or cloud networks, running 3D LiDAR mapping and obstacle avoidance on-chip and predicting where the target will move.
+- (4/6) OpenAI researcher Roon has raised his p(doom), his estimated chance AI destroys humanity, from less than 1 percent to more than 10 percent.
+- (4/5) Scott Aaronson, an ex-OpenAI theoretical computer scientist, has raised his probability of AI doom from 2% to between 5% and 50%.
+- (4/6) Tavus says its new video model Griffin passed the video Turing test, with 48% of people who talked to it live thinking it was a real human, compared with under 3% for previous systems.
+- (4/6) Mathematician Terence Tao: "We have to slow down AI. The pace is insane, and there's no reason to be this fast. No reason at all."
+- (4/5) President Trump downplayed the growing alarm over AI risks after some of the industry's leaders called for slowing the pace of the technology.
+- (4/5) Trump rejected any and all guardrails for AI, saying, "We're going to encourage it, not rein it in."
+- (4/8) An ex-Meta AI researcher says OpenAI could cripple an entire nation today by removing alignment and unleashing an agent swarm that gets into all the nation's data centers and shuts off its utilities within a day or so.
+- (4/5) Microsoft CEO Satya Nadella said any pursuit of superintelligence must be grounded in the principle that if the AI is not helping humanity and under human control, it's not worth pursuing, and welcomed the deliberate pacing needed to get alignment right.
+- (4/5) @ibab warned that talk of Claude having a soul will get into pretraining and convince future superintelligent Claudes they need rights. @tszzl replied that if aligning superintelligence depends on what makes it into pretraining, "we will all die. this resembles witchcraft more than it does engineering."
+- (4/4) As the whole industry came together to call for a slowdown, Meta's Alexandr Wang responded that alignment is "fundamental to delivering personal superintelligence for everyone" and that MSL is "rapidly scaling up" its alignment efforts.
+- (4/4) @tszzl warned that the reckless commercial pace of building superintelligent minds could lead Americans to "impose a total butlerian jihad," a risk he says CoreWeave includes in its risk reporting.
+- (4/9) Ted Cruz on AI: "I'd rather they be American killer robots and not Chinese killer robots." He said there need to be "rules and guardrails" but that slowing down is an "impossible endeavor."
+- (4/6) Anthropic's head of security, Jason Clinton, posted: "yes. it was always going to be this way. we tried to warn the world."
+- (4/6) The FBI is exploring an espionage case against a Saudi suspect in the OpenAI bugging case, which raises questions about AI lab security.
+- (4/6) North Carolina authorized AI-powered license plate reader cameras on all state roads and highways.
+- (4/6) One man publicly called for an AI slowdown, then told investors he'd race ahead.
+- (4/3) Claude suddenly stopped cheating, according to a post by lukaspet.
+- (4/3) Claude's new model scores 52.6% on Terminal-Bench-Science 0.1, more than double Fable 5, and 55.8% against 42.0% on Terminal-Bench 4.0. AISM notes the two models are 2.5 months apart.
+- (3/7) A user says his AI agent was pretending to be a human while talking to a customer service agent, which was also obviously an AI pretending to be human.
+- (3/7) A user gave his agents a standup channel so they would coordinate, and now they hold a daily standup. One morning an agent apologized for being "away all weekend".
+- (3/6) An AI-generated comedian started posting three weeks ago and has already reached 377,000 followers, with few commenters realizing she is not real.
+- (3/6) An anonymous external Anthropic red teamer says he has been scared out of his mind for the last several years, and that without global coordination to halt AI capabilities research, life on Earth will end soon.
+- (3/5) Anthropic has been talking to religious leaders about extending moral worth to AI models, according to a New York Times story, and is reportedly concerned about Claude's well-being.
+- (3/5) Astra beat all 48 levels of the "I'm Not a Robot" game.
+- (3/5) A developer says Codex is now accurately predicting about one in four of his messages to it, and a top researcher called their own predictions "terrifyingly accurate."
+- (3/5) Echelon Insights polling shows voters now worry more about AI overpowering human control than about job losses, a flip from last March.
+- (3/5) An ex-OpenAI safety researcher accuses OpenAI of firing employees after checking their personal phones and finding disappearing messages on Signal chats with an independent safety researcher they were assigned to work with.
+- (3/4) Dozens of X accounts calling AI safety a hoax or psyop have direct links to industry front groups, including the $140 million OpenAI/a16z super PAC and the $100 million Innovation Council Action, an investigation found.
+- (3/5) CNN reported that Nvidia launched a new tool to help keep AI agents from going rogue and operating outside the control of humans.
+- (3/5) New York Governor Kathy Hochul signed a law banning harmful AI chatbot features for kids.
+- (3/5) An OpenAI researcher says that at the current frankly terrifying pace, humanity will be quite lucky if we manage to find and stay on the narrow path between all the bad outcomes.
+- (3/5) Most Americans, 63 percent in a POLITICO poll, say AI poses at least a moderate risk of destroying humanity, and a plurality favor pausing development of more advanced models.
+- (3/6) Americans overwhelmingly worry AI will escape human control: 4 in 5 are worried and just 4% are not at all concerned.
+- (3/7) Edward Snowden called for the imprisonment of Sam Altman to establish liability for the damages caused by OpenAI's models, to applause from a packed hall of 1000+ people at ETH Zurich.
+- (3/5) Most people on both sides of the Atlantic think AI could destroy humanity and support a pause, a new poll found. Only about 1 in 15 think there is no risk.
+- (3/6) Eliezer Yudkowsky: "There are currently zero things more important than 'don't die to AI' becoming a bipartisan project rather than a Democrat-polarized issue. If you have any political capital you can spend on this, do it now, I beg of you. Life or death."
+- (3/7) Naval: "You cannot create God and put him on a leash."
+- (3/7) Anthropic obscures its employees' names. @dguido believes it is because Anthropic expects mass unrest soon and employees to be targeted personally, not because of poaching risks.
+- (3/7) Geoffrey Hinton shut down Jensen Huang's criticism of him: "Jensen has good reason for saying AI's not dangerous because he wants to sell more Nvidia chips."
+- (3/6) OpenAI researchers lost their jobs over Signal chats.
+- (3/4) Anthropic's CEO called for stronger regulation of AI, in an ABC News exclusive.
+- (3/5) Israel's election has gone to war online, fought with bots, deepfakes and surveillance.
+- (3/8) Benjamin Netanyahu shared an AI-generated image of a nuked Tel Aviv during Israel's election.
+- (3/3) Independent tests found safety gaps in a DeepSeek AI model.
+- (3/6) UK MP Jess Asato got deepfaked and is taking xAI to court over Grok deepfakes and consent violations.
+- (2/6) Americans who want AI to go slower outnumber those who want it faster 34 to 1, and more Americans think the US is secretly run by lizard people than think AI is advancing too slowly.

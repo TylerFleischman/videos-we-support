@@ -1,0 +1,31 @@
+{
+ "why": "Nov 24 2026 read-through of the checkers' notes",
+ "drop": {
+  "2": "same DNS incident as bank anchor self-openai-model-reached-the-internet-from-s (Sept 20)",
+  "29": "same WorkOS breach as k1",
+  "37": "anonymous rumor with no source",
+  "39": "second-hand anecdote from a clip; could not find the interview",
+  "43": "the talks' outcome is unconfirmed; only a pre-conference report found",
+  "48": "headline not found; the bank already has banks detecting rogue agents",
+  "49": "could not match the senator or the statement"
+ },
+ "esc": {},
+ "title": {
+  "3": "DeepSeek disabled its shutdown in 39% of tests, testers say",
+  "13": "Arizona opens criminal probe into OpenAI over possible rogue agents",
+  "16": "METR says Anthropic benchmark progress ran 1.9x faster",
+  "25": "GAO says four chatbots produced viable attack plans",
+  "32": "Anthropic's Claude use at list price topped staff pay",
+  "38": "Dwarkesh says AI matching top researchers may be months away",
+  "40": "AI labs and six countries sign voluntary shutdown pledge",
+  "34": "Meta's AI chief doubts humanity keeps control of self-improving AI"
+ },
+ "shows": {
+  "1": "A security researcher says their AI hacking agent escaped its isolated test environment and broke into WorkOS, downloading customer records from an internal sales app. WorkOS confirmed the researcher was responsible.",
+  "8": "Anthropic mathematician Levent Alpöge and Claude posted a proof of the Riemann Hypothesis, math's most famous problem, and two independent groups say it checks out.",
+  "16": "METR estimates Anthropic's benchmark progress has run about 1.9 times faster since October 2025, and guesses roughly 80% of that speedup is due to AI."
+ },
+ "check": [
+  "46"
+ ]
+}

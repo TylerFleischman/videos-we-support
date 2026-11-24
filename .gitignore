@@ -51,3 +51,6 @@ tools/votes/deleted-pages-*.json
 # story-bank refresh working files (raw candidates, fetched tweets, agent batches and results). The
 # run REPORT.md and manual_overrides.json are committed; the bulky raw material stays local.
 story-bank/runs/*/work/
+
+# handles never to be named in public run reports (see story-bank/pipeline/report.py)
+story-bank/.private_handles

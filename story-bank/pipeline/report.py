@@ -55,7 +55,7 @@ w("| Checker verdicts | %s |" % ", ".join("%s %d" % kv for kv in Counter(r.get("
 w("| Dropped after checking | %d |" % len(dropped))
 w("| **Added to the bank** | **%d** (%d marked check: single first-hand source) |" % (len(added), sum(1 for a in added if a.get("check"))))
 w("")
-w("Lower-ranked groups that were not sent to checking are listed in the run's work folder and can be added later.")
+w("Nothing is deleted: everything not added is listed below or in [SCREENED_OUT.md](SCREENED_OUT.md) with its reason.")
 w("")
 w("## Added")
 w("")
@@ -79,5 +79,43 @@ w("Counts by reason are in the funnel above. Reasons: `meme` (a joke with no che
   "with no event behind it), `off-topic`, `mundane` (scams, AI mistakes, energy, privacy gripes, product news), "
   "`ai-looks-dumb`, `race-frame`, `too-thin`, `in-bank` (same event already in the bank). Every cut except plain "
   "memes was rechecked by a second agent told to restore anything real.")
+below = J("below_bar.json") if os.path.exists(os.path.join(WORK, "below_bar.json")) else []
+if below:
+    w("")
+    w("## Kept but not checked (below the bar)")
+    w("")
+    w("Real stories that ranked below 5 on the lower of escalation and telling (and below 7 on escalation). "
+      "They were not checked or added this run; a later run can pick them up.")
+    w("")
+    for g in sorted(below, key=lambda g: (-min(g["esc"], g["grab"]), -g["esc"])):
+        w("- (%d/%d) %s" % (g["esc"], g["grab"], g["shows"]))
 open(os.path.join(RUN, "REPORT.md"), "w").write("\n".join(L) + "\n")
+# every screening cut, with its reason and link, so nothing leaves quietly
+S = ["# Screened out, %s" % DATE, "",
+     "Every candidate cut at screening and not restored on recheck, with the screener's reason. "
+     "Reasons are defined in [screen_brief.md](../../pipeline/screen_brief.md).", ""]
+by_reason = {}
+for n, r in screen.items():
+    if not r.get("keep") and n not in restored:
+        by_reason.setdefault(r.get("cut_reason") or "?", []).append(n)
+c_by_n = {c["n"]: c for c in cand}
+# accounts that must never be named in this public repo: one handle per line in the gitignored
+# story-bank/.private_handles (their posts are still screened, just not listed)
+_ph = os.path.join(REPO, "story-bank", ".private_handles")
+private = {l.strip().lower().lstrip("@") for l in open(_ph)} - {""} if os.path.exists(_ph) else set()
+is_private = lambda c: any(h and (h == (c.get("author") or "").lower() or "/%s/" % h in (c.get("url") or "").lower()
+                                  or "@" + h in (c.get("text") or "").lower()) for h in private)
+hidden = 0
+for reason, ns in sorted(by_reason.items(), key=lambda kv: -len(kv[1])):
+    S.append("## %s (%d)" % (reason, len(ns))); S.append("")
+    for n in sorted(ns):
+        c = c_by_n[n]
+        if is_private(c):
+            hidden += 1; continue
+        txt = " ".join((c.get("text") or "").split())[:160].replace("|", "/")
+        S.append("- %s%s" % (txt, " [link](%s)" % c["url"] if c.get("url") else ""))
+    S.append("")
+if hidden:
+    S.append("(%d posts from private accounts are not listed.)" % hidden)
+open(os.path.join(RUN, "SCREENED_OUT.md"), "w").write("\n".join(S) + "\n")
 print("wrote %s: %d added, %d dropped at check" % (os.path.join(RUN, "REPORT.md"), len(added), len(dropped)))

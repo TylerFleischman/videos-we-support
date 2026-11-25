@@ -108,7 +108,7 @@ def main():
                     extra = nums(t + " " + l) - story_nums
                     if extra:
                         errors.append(f"{label}: numbers not in its story: {sorted(extra)}")
-                    # Titles may use the channel's own format ("The Dark Science of X"); loglines never name it.
+                    # Titles may use the channel's own title format, even where it contains its name; loglines never name it.
                     if re.search(re.escape(creator), l, re.I):
                         errors.append(f"{label}: logline names the creator; talk about the world, not the channel")
                     for b in BANNED:

@@ -31,8 +31,9 @@ Paths below assume the two repos sit side by side; `DEMO` is the demo repo.
    bank categories to favour, and patterns to avoid. Base it on recent transcripts where you can get them
    (the backend's `_build_profile` and `_build_voice` do this for the live app); at minimum, on the real
    video list. The format is in the docstring of `shortlist.py`.
-2. **Refresh the video pool.** `node DEMO/tools/video-pool.js` writes `DEMO/ideation/video-pool.json`
-   from the videos already on approved creator pages.
+2. **Refresh the video pool.** `node DEMO/tools/video-pool.js` writes `DEMO/ideation/video-pool.json`:
+   the approved videos on the video master list (`DEMO/ideation/videos.json`), each with the pages it is
+   already on.
 3. **Shortlist stories.**
    `python3 ideation/shortlist.py DEMO/ideation/<slug>/channel.json --out DEMO/ideation/<slug>/shortlist.md`
    ranks every uncut bank story that fits the lens, one per real event, on the generator's own bar
@@ -42,13 +43,14 @@ Paths below assume the two repos sit side by side; `DEMO` is the demo repo.
 4. **Write the ideas** into `DEMO/ideation/<slug>/page.json`, following [`brief.md`](brief.md). Shape:
    `{creator, handle, pulled, categories: [{category, stories: [{anchor, text, source, videos: [{id,
    title, channel, views, secs, date, funded, ideas: [{title, logline, link}]}]}]}]}`. `source` is
-   `{url, publisher, headline, date, icon, tier: "card", image?}`; `pulled` is the newest pull date of the
-   pool videos used.
+   `{url, publisher, headline, date, icon, tier: "card", image?}`; `pulled` is the video list's `pulled`
+   date. Copy each video's fields from the pool exactly.
 5. **Check it.**
    `python3 ideation/check_page.py DEMO/ideation/<slug>/page.json --pool DEMO/ideation/video-pool.json`
    must report 0 errors. Then a person reads every idea against rules 2, 3, 5 and 8 of the brief.
 6. **Build the page.** In the demo repo, `node tools/build-creator-page.js ideation/<slug>/page.json <slug>`,
-   then add the creator's card to `index.html`. Rebuilding keeps the page's link.
+   then add the creator's card to `index.html`. Rebuilding keeps the page's link. Rebuild the team's
+   Story and Video Bank too (`node tools/build-bank-page.js`), so it shows the new page's stories as used.
 
 ## When the bank changes
 

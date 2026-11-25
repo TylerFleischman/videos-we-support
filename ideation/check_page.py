@@ -9,7 +9,7 @@ Errors
   - a story whose anchor is not in the bank, or was cut by the curator
   - a story with no source link, or a TWEET as its source (the page links readers to the news version)
   - a number in the story text that the bank's checked `shows` sentence does not contain
-  - a video that is not in the approved video pool, or whose stats differ from the pool
+  - a video that is not approved on the video master list (the pool), or whose details differ from it
   - a number in an idea that its story text does not contain (numbers are frozen, see brief.md)
   - an idea whose link is not its story's source link
   - an idea whose logline names the creator, or that uses a phrase brief.md bans

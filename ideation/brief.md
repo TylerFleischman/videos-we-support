@@ -43,8 +43,8 @@ Each story on the page gets one example video and at least one idea:
 
 ## The example video
 
-Pick it from `video-pool.json` (built by the demo repo's `tools/video-pool.js`): a video already on an
-approved page whose subject is closest to the story, ideally one this channel's audience would also
+Pick it from `video-pool.json` (built by the demo repo's `tools/video-pool.js` from the approved videos
+on the video master list): the one whose subject is closest to the story, ideally one this channel's audience would also
 watch. Copy its fields exactly; the checker compares them to the pool. Try not to repeat a video.
 
 `check_page.py` enforces rules 1, 4, 6, 7 and the video, link and anchor checks. Rules 2, 3, 5 and 8

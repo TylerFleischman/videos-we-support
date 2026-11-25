@@ -38,6 +38,10 @@ backend/
   evidence.json             Documented-incident library
   transcripts.json          Preloaded channel transcripts
   bio_holdout/              Biosecurity-specific dossiers, sources, and lane notes
+
+story-bank/                 How stories get into the bank (backend/sources.json)
+ideation/                   How a channel gets a page of ideas built on the bank, shown in the
+                            CAIS ideation demo (shortlist, writing brief, page checker)
 ```
 
 ## Running it yourself
